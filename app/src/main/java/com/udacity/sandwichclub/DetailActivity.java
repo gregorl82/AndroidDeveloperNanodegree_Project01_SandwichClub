@@ -3,6 +3,7 @@ package com.udacity.sandwichclub;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -82,29 +83,31 @@ public class DetailActivity extends AppCompatActivity {
         if (sandwich.getAlsoKnownAs().isEmpty()) {
             alsoKnownAsTv.setText(R.string.not_applicable_message);
         } else {
-            for (int i = 0; i < sandwich.getAlsoKnownAs().size(); i++) {
-                alsoKnownAsTv.append(sandwich.getAlsoKnownAs().get(i) + "\n\n");
+            int akaLength = sandwich.getAlsoKnownAs().size();
+            for (int i = 0; i < akaLength; i++) {
+                alsoKnownAsTv.append(sandwich.getAlsoKnownAs().get(i) + "\n");
             }
         }
 
         if (sandwich.getPlaceOfOrigin().isEmpty()) {
             placeOfOriginTv.setText(R.string.not_applicable_message);
         } else {
-            placeOfOriginTv.setText(sandwich.getPlaceOfOrigin());
+            placeOfOriginTv.append(sandwich.getPlaceOfOrigin() + "\n");
         }
 
         if (sandwich.getIngredients().isEmpty()) {
             ingredientsTv.setText(R.string.not_applicable_message);
         } else {
-            for (int i = 0; i < sandwich.getIngredients().size(); i++) {
-                ingredientsTv.append(sandwich.getIngredients().get(i) + "\n\n");
+            int ingredientLength = sandwich.getIngredients().size();
+            for (int i = 0; i < ingredientLength; i++) {
+                ingredientsTv.append(sandwich.getIngredients().get(i) + "\n");
             }
         }
 
         if (sandwich.getDescription().isEmpty()) {
             descriptionTv.setText(R.string.not_applicable_message);
         } else {
-            descriptionTv.setText(sandwich.getDescription());
+            descriptionTv.append(sandwich.getDescription() + "\n");
         }
 
     }
