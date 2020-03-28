@@ -39,10 +39,10 @@ public class JsonUtils {
         JSONArray ingredientJsonArray = sandwichJsonObject.getJSONArray("ingredients");
 
         // Loop over ingredientJsonArray, get string and add to ingredients list
+        // TODO (4) Modify for loop so that empty values are not added
         for (int i = 0; i < ingredientJsonArray.length(); i++) {
             ingredients.add(ingredientJsonArray.getString(i));
         }
-
 
         // Create JSONObject for name
         JSONObject nameJsonObject = sandwichJsonObject.getJSONObject("name");
@@ -55,6 +55,7 @@ public class JsonUtils {
         JSONArray alsoKnownAsJsonArray = nameJsonObject.getJSONArray("alsoKnownAs");
 
         // Loop over alsoKnownAsJsonArray, get string and add to alsoKnownAs list
+        // TODO (5) Modify for loop so that empty values are not added
         for (int i = 0; i < alsoKnownAsJsonArray.length(); i++) {
             alsoKnownAs.add(alsoKnownAsJsonArray.getString(i));
         }

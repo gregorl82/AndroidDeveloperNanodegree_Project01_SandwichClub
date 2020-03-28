@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     tools:context="com.udacity.sandwichclub.DetailActivity">
 
+    <!-- TODO (6) Change paddingTop, Left, Right to margin and reduce to 4dp -->
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -12,6 +14,11 @@
         android:paddingTop="16dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp" >
+
+
+        <!-- TODO (7) Remove lineSpacingMultiplier from TextViews -->
+        <!-- TODO (8) Increase marginTop to 16dp in heading items -->
+        <!-- TODO (9) Reduce marginTop to 4dp in text items -->
 
         <ImageView
             android:id="@+id/image_iv"
@@ -76,6 +83,8 @@
             android:textStyle="bold"
             android:layout_marginTop="8dp"
             android:lineSpacingMultiplier="1.2"/>
+
+        <!-- TODO (10) Increase lineSpacingMultiplier to 1.5  -->
 
         <TextView
             android:id="@+id/description_tv"

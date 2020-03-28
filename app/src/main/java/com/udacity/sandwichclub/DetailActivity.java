@@ -65,6 +65,10 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void populateUI(Sandwich sandwich) {
+
+        // TODO (1) Move assignment of TextViews to OnCreate
+        // TODO (3) Display 'not_applicable_message' string if any TextView is empty
+
         TextView alsoKnownAsTv = (TextView) findViewById(R.id.also_known_tv);
         TextView placeOfOriginTv = (TextView) findViewById(R.id.origin_tv);
         TextView ingredientsTv = (TextView) findViewById(R.id.ingredients_tv);
@@ -72,7 +76,7 @@ public class DetailActivity extends AppCompatActivity {
 
         for (int i = 0; i < sandwich.getAlsoKnownAs().size(); i++) {
             alsoKnownAsTv.append(sandwich.getAlsoKnownAs().get(i) + "\n\n");
-        };
+        }
 
         placeOfOriginTv.setText(sandwich.getPlaceOfOrigin());
 
