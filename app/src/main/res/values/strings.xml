@@ -13,7 +13,8 @@
     <!-- Error messages-->
     <string name="detail_error_message">Sandwich data not available</string>
 
-    <!-- TODO (2) Create new string resource called "not_applicable_message" -->
+    <!-- COMPLETED (2) Create new string resource called "not_applicable_message" -->
+    <string name="not_applicable_message">N/A</string>
 
     <string-array name="sandwich_names">
         <item>Ham and cheese sandwich</item>

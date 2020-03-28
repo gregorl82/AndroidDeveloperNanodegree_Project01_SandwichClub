@@ -77,18 +77,35 @@ public class DetailActivity extends AppCompatActivity {
     private void populateUI(Sandwich sandwich) {
 
         // COMPLETED (1) Move assignment of TextViews to OnCreate
-        // TODO (3) Display 'not_applicable_message' string if any TextView is empty
+        // COMPLETED (3) Display 'not_applicable_message' string if any TextView is empty
 
-        for (int i = 0; i < sandwich.getAlsoKnownAs().size(); i++) {
-            alsoKnownAsTv.append(sandwich.getAlsoKnownAs().get(i) + "\n\n");
+        if (sandwich.getAlsoKnownAs().isEmpty()) {
+            alsoKnownAsTv.setText(R.string.not_applicable_message);
+        } else {
+            for (int i = 0; i < sandwich.getAlsoKnownAs().size(); i++) {
+                alsoKnownAsTv.append(sandwich.getAlsoKnownAs().get(i) + "\n\n");
+            }
         }
 
-        placeOfOriginTv.setText(sandwich.getPlaceOfOrigin());
-
-        for (int i = 0; i < sandwich.getIngredients().size(); i++) {
-            ingredientsTv.append(sandwich.getIngredients().get(i) + "\n\n");
+        if (sandwich.getPlaceOfOrigin().isEmpty()) {
+            placeOfOriginTv.setText(R.string.not_applicable_message);
+        } else {
+            placeOfOriginTv.setText(sandwich.getPlaceOfOrigin());
         }
 
-        descriptionTv.setText(sandwich.getDescription());
+        if (sandwich.getIngredients().isEmpty()) {
+            ingredientsTv.setText(R.string.not_applicable_message);
+        } else {
+            for (int i = 0; i < sandwich.getIngredients().size(); i++) {
+                ingredientsTv.append(sandwich.getIngredients().get(i) + "\n\n");
+            }
+        }
+
+        if (sandwich.getDescription().isEmpty()) {
+            descriptionTv.setText(R.string.not_applicable_message);
+        } else {
+            descriptionTv.setText(sandwich.getDescription());
+        }
+
     }
 }
