@@ -3,7 +3,6 @@ package com.udacity.sandwichclub;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -76,9 +75,6 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void populateUI(Sandwich sandwich) {
-
-        // COMPLETED (1) Move assignment of TextViews to OnCreate
-        // COMPLETED (3) Display 'not_applicable_message' string if any TextView is empty
 
         if (sandwich.getAlsoKnownAs().isEmpty()) {
             alsoKnownAsTv.setText(R.string.not_applicable_message);

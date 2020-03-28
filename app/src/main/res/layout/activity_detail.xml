@@ -6,17 +6,10 @@
     android:padding="8dp"
     tools:context="com.udacity.sandwichclub.DetailActivity">
 
-    <!-- COMPLETED (6) Change paddingTop, Left, Right to padding and reduce to 4dp -->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
-
-        <!-- COMPLETED (7) Remove lineSpacingMultiplier from TextViews -->
-        <!-- COMPLETED (8) Increase marginTop to 16dp in heading items -->
-        <!-- COMPLETED (9) Reduce marginTop to 4dp in text items -->
 
         <ImageView
             android:id="@+id/image_iv"
@@ -63,7 +56,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:lineSpacingMultiplier="1.3"
             android:text="@string/detail_ingredients_label"
             android:textSize="20sp"
             android:textStyle="bold"/>
@@ -73,6 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:lineSpacingMultiplier="1.3"
             android:paddingLeft="8dp"
             android:textSize="16sp"/>
 
