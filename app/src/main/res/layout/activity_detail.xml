@@ -3,22 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="8dp"
     tools:context="com.udacity.sandwichclub.DetailActivity">
 
-    <!-- TODO (6) Change paddingTop, Left, Right to margin and reduce to 4dp -->
+    <!-- COMPLETED (6) Change paddingTop, Left, Right to padding and reduce to 4dp -->
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="16dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp" >
+        android:orientation="vertical">
 
 
-        <!-- TODO (7) Remove lineSpacingMultiplier from TextViews -->
-        <!-- TODO (8) Increase marginTop to 16dp in heading items -->
-        <!-- TODO (9) Reduce marginTop to 4dp in text items -->
+        <!-- COMPLETED (7) Remove lineSpacingMultiplier from TextViews -->
+        <!-- COMPLETED (8) Increase marginTop to 16dp in heading items -->
+        <!-- COMPLETED (9) Reduce marginTop to 4dp in text items -->
 
         <ImageView
             android:id="@+id/image_iv"
@@ -31,68 +29,69 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="@string/detail_also_known_as_label"
-            android:textStyle="bold"
-            android:layout_marginTop="8dp"
-            android:lineSpacingMultiplier="1.2"/>
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/also_known_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:lineSpacingMultiplier="1.3"
             android:paddingLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:lineSpacingMultiplier="1.2"/>
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="@string/detail_place_of_origin_label"
-            android:textStyle="bold"
-            android:layout_marginTop="8dp"
-            android:lineSpacingMultiplier="1.2"/>
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/origin_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:paddingLeft="8dp"
-            android:lineSpacingMultiplier="1.2"/>
+            android:textSize="16sp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
+            android:lineSpacingMultiplier="1.3"
             android:text="@string/detail_ingredients_label"
-            android:textStyle="bold"
-            android:lineSpacingMultiplier="1.2"/>
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/ingredients_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:paddingLeft="8dp"
-            android:lineSpacingMultiplier="1.2"/>
+            android:textSize="16sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
             android:text="@string/detail_description_label"
-            android:textStyle="bold"
-            android:layout_marginTop="8dp"
-            android:lineSpacingMultiplier="1.2"/>
-
-        <!-- TODO (10) Increase lineSpacingMultiplier to 1.5  -->
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/description_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:lineSpacingMultiplier="1.3"
             android:paddingLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:lineSpacingMultiplier="1.2"/>
+            android:textSize="16sp"/>
 
     </LinearLayout>
 
